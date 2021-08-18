@@ -1,0 +1,254 @@
+body{
+    margin:0;
+    padding: 0;  
+    background-color: black;
+}
+
+#container{
+    
+    width: 100%;
+    height: 90vh;
+    perspective: 1000px;
+    perspective-origin: 50% -135px;
+    -webkit-perspective-origin: 50% -135px;
+}
+.stage{
+    width: 100%;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: -webkit-transform 2s;
+}
+#shape{
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+    height: 200px;
+    width: 200px;
+    transform-style: preserve-3d;
+    
+}
+.plane{
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px solid white;
+    border-radius: 12px;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    transition: -webkit-transform 2s, opacity 2s;
+    backface-visibility: hidden;
+}
+#shape.backfaces .plane{
+    backface-visibility: visible;
+}
+#shape{
+    animation: spin 30s infinite linear;
+    
+}
+@keyframes spin{
+    from{transform: rotateY(0); }
+    to{transform: rotateY(360deg)}
+}
+.one{
+    background-image: url('img/1.jpg');
+    background-size: cover;
+    
+}
+.two{
+    background-image: url('img/2.jpg');
+    background-size: cover;
+    
+}
+.three{
+    background-image: url('img/3.jpg');
+    background-size: cover;
+    
+}
+.four{
+    background-image: url('img/4.jpg');
+    background-size: cover;
+    
+}
+.five{
+    background-image: url('img/5.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.six{
+    background-image: url('img/6.jpg');
+    background-size: cover;
+    
+}
+.seven{
+    background-image: url('img/7.jpg');
+    background-size: cover;
+    
+}
+.eight{
+    background-image: url('img/8.jpg');
+    background-size: cover;
+    
+}
+.nine{
+    background-image: url('img/9.jpg');
+    background-size: cover;
+    
+}
+.ten{
+    background-image: url('img/10.jpg');
+    background-size: cover;
+    background-position: right;
+}
+.eleven{
+    background-image: url('img/11.jpg');
+    background-size: cover;
+    
+}
+.twelve{
+    background-image: url('img/12.jpg');
+    background-size: cover;
+    
+}
+#shape.cube >.one{
+    opacity: 0.2;
+    transform: scale3d(1.2,1.2,1.2) rotateX(90deg) translateZ(100px);
+}
+#shape.cube >.two{
+    opacity: 0.2;
+    transform: scale3d(1.2,1.2,1.2) rotateY(0deg)  translateZ(100px);
+}
+#shape.cube > .three{
+    opacity: 0.2;
+    transform: scale3d(1.2,1.2,1.2) rotateY(90deg) translateZ(100px);
+}
+#shape.cube > .four{
+    opacity: 0.2;
+    transform: scale3d(1.2,1.2,1.2) rotateY(180deg) translateZ(100px); 
+}
+#shape.cube >.five{
+    opacity: 0.2;
+    transform: scale3d(1.2,1.2,1.2) rotateY(-90deg) translateZ(100px);
+}
+#shape.cube > .six{
+    opacity: 0.2;
+    transform: scale3d(1.2,1.2,1.2) rotateX(-90deg) translateZ(100px) rotate(180deg);
+} 
+
+#shape:hover.cube > .one{
+    opacity: 0.9;
+    transform: scale3d(1.5,1.5,1.5) rotateX(90deg) translateZ(150px)
+}
+#shape:hover.cube > .two{
+    opacity: 0.9;
+    transform: scale3d(1.5,1.5,1.5) rotateY(0deg) translateZ(150px);
+}
+#shape:hover.cube > .three{
+ opacity: 0.9;
+ transform: scale3d(1.5,1.5,1.5) rotateY(90deg) translateZ(150px);
+
+}
+#shape:hover.cube > .four{
+    opacity: 0.9;
+    transform: scale3d(1.5,1.5,1.5) rotateY(180deg) translateZ(150px);
+   
+   }
+
+   #shape:hover.cube > .five{
+    opacity: 0.9;
+    transform: scale3d(1.5,1.5,1.5) rotateY(-90deg) translateZ(150px);
+   
+   }
+
+   #shape:hover.cube > .six{
+    opacity: 0.9;
+    transform: scale3d(1.5,1.5,1.5) rotateX(-90deg) translateZ(150px) rotate(180deg);
+   
+   }
+
+   #shape.cube >.seven{
+    opacity: 1;
+    transform: scale3d(0.8,0.8,0.8) rotateX(90deg) translateZ(100px) rotate(180deg);
+}
+#shape.cube >.eight{
+    opacity: 1;
+    transform: scale3d(0.8,0.8,0.8) rotateY(0deg) translateZ(100px);
+}
+
+#shape.cube > .nine{
+    opacity: 1;
+    transform: scale3d(0.8,0.8,0.8) rotateY(90deg) translateZ(100px);
+} 
+#shape.cube > .ten{
+    opacity: 1;
+    transform: scale3d(0.8,0.8,0.8) rotateY(180deg) translateZ(100px);
+} 
+#shape.cube > .eleven{
+    opacity: 1;
+    transform: scale3d(0.8,0.8,0.8) rotateY(-90deg) translateZ(100px);
+} 
+
+#shape.cube > .twelve{
+    opacity: 1;
+    transform: scale3d(0.8,0.8,0.8) rotateX(-90deg) translateZ(100px);
+} 
+
+.ring > .one {
+    transform: translateZ(380px);
+    -webkit-transform: translateZ(380px);
+  }
+
+  .ring > .two {
+    transform: rotateY(30deg) translateZ(380px);
+    -webkit-transform: rotateY(30deg) translateZ(380px);
+  }
+
+  .ring > .three {
+    transform: rotateY(60deg) translateZ(380px);
+    -webkit-transform: rotateY(60deg) translateZ(380px);
+  }
+
+  .ring > .four {
+    transform: rotateY(90deg) translateZ(380px);
+    -webkit-transform: rotateY(90deg) translateZ(380px);
+  }
+
+  .ring > .five {
+    transform: rotateY(120deg) translateZ(380px);
+    -webkit-transform: rotateY(120deg) translateZ(380px);
+  }
+
+  .ring > .six {
+    transform: rotateY(150deg) translateZ(380px);
+    -webkit-transform: rotateY(150deg) translateZ(380px);
+  }
+
+  .ring > .seven {
+    transform: rotateY(180deg) translateZ(380px);
+    -webkit-transform: rotateY(180deg) translateZ(380px);
+  }
+
+  .ring > .eight {
+    transform: rotateY(210deg) translateZ(380px);
+    -webkit-transform: rotateY(210deg) translateZ(380px);
+  }
+
+  .ring > .nine {
+    transform: rotateY(-120deg) translateZ(380px);
+    -webkit-transform: rotateY(-120deg) translateZ(380px);
+  }
+
+  .ring > .ten {
+    transform: rotateY(-90deg) translateZ(380px);
+    -webkit-transform: rotateY(-90deg) translateZ(380px);
+  }
+
+  .ring > .eleven {
+    transform: rotateY(300deg) translateZ(380px);
+    -webkit-transform: rotateY(300deg) translateZ(380px);
+  }
+
+  .ring > .twelve {
+    transform: rotateY(330deg) translateZ(380px);
+    -webkit-transform: rotateY(330deg) translateZ(380px);
+  }
